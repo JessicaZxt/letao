@@ -1,0 +1,172 @@
+body {
+  background-color: #fff;
+  padding: .45rem 0;
+  height: 100vh;
+  font-size: .14rem;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  font-size: .14rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 头部区域的样式 */
+#header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #006699;
+  height: .45rem;
+  text-align: center;
+  color: #fff;
+}
+#header .left {
+  width: .45rem;
+  height: 100%;
+}
+#header .center {
+  flex: 1;
+  margin: 0;
+  height: 100%;
+  line-height: .45rem;
+  font-weight: normal;
+  font-size: .18rem;
+}
+#header .right {
+  width: .45rem;
+  height: 100%;
+  line-height: .45rem;
+  color: #fff;
+  font-size: .14rem;
+}
+/* 底部样式 */
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: .45rem;
+  z-index: 999;
+  background-color: #006699;
+  display: flex;
+}
+#footer a {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: .14rem;
+}
+#footer a span {
+  line-height: .14rem;
+}
+#footer a.active {
+  color: orange;
+}
+/* 主体区域的样式 */
+#main {
+  height: 100%;
+  position: relative;
+}
+#main #nav {
+  padding: .1rem;
+}
+#main #nav a {
+  display: block;
+}
+#main #nav a img {
+  width: 100%;
+}
+#main #banner {
+  padding: .1rem;
+  padding-top: 0;
+}
+#main #banner .left a {
+  display: block;
+}
+#main #banner .left a img {
+  width: 50%;
+}
+#main #banner .right a {
+  display: block;
+}
+#main #banner .right a img {
+  width: 100%;
+  height: 2.42rem;
+}
+#main #brand {
+  padding: .1rem;
+  padding-top: 0;
+}
+#main #brand .tlt a {
+  display: block;
+}
+#main #brand .tlt a img {
+  width: 100%;
+}
+#main #brand .mui-col-xs-3 a {
+  display: block;
+}
+#main #brand .mui-col-xs-3 a img {
+  width: 100%;
+}
+#main #sport {
+  padding: .1rem;
+  padding-top: 0;
+}
+#main #sport .tlt a {
+  display: block;
+}
+#main #sport .tlt a img {
+  width: 100%;
+}
+#main #sport .mui-col-xs-6 {
+  background-color: #fff;
+  font-size: .14rem;
+  text-align: center;
+}
+#main #sport .mui-col-xs-6 a {
+  display: block;
+  color: #666;
+}
+#main #sport .mui-col-xs-6 a img {
+  width: 100%;
+}
+#main #sport .mui-col-xs-6 a button {
+  color: #fff;
+  background-color: #007aff;
+  margin-bottom: .1rem;
+}
+#main #women {
+  padding: .1rem;
+  padding-top: 0;
+}
+#main #women .tlt a {
+  display: block;
+}
+#main #women .tlt a img {
+  width: 100%;
+}
+#main #man {
+  padding: .1rem;
+  padding-top: 0;
+}
+#main #man .tlt a {
+  display: block;
+}
+#main #man .tlt a img {
+  width: 100%;
+}

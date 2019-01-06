@@ -1,0 +1,93 @@
+body {
+  background-color: #fff;
+  padding: .45rem 0;
+  height: 100vh;
+  font-size: .14rem;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  font-size: .14rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 头部区域的样式 */
+#header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #006699;
+  height: .45rem;
+  text-align: center;
+  color: #fff;
+}
+#header .left {
+  width: .45rem;
+  height: 100%;
+}
+#header .center {
+  flex: 1;
+  margin: 0;
+  height: 100%;
+  line-height: .45rem;
+  font-weight: normal;
+  font-size: .18rem;
+}
+#header .right {
+  width: .45rem;
+  height: 100%;
+  line-height: .45rem;
+  color: #fff;
+  font-size: .14rem;
+}
+/* 底部样式 */
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: .45rem;
+  z-index: 999;
+  background-color: #006699;
+  display: flex;
+}
+#footer a {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: .14rem;
+}
+#footer a span {
+  line-height: .14rem;
+}
+#footer a.active {
+  color: orange;
+}
+#header a {
+  color: #fff;
+  line-height: .45rem;
+}
+#header a i {
+  font-size: .14rem;
+}
+#main .mui-card .mui-card-header {
+  font-size: .14rem;
+}
+#main .mui-card-content span a {
+  display: block;
+  color: #fff;
+  font-size: .1rem;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动端分类页面</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 引入mui的css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入Font Awesonme的css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己主页的less文件 -->
+    <link rel="stylesheet/less" href="less/category.less">
+    <!-- 引入less.js编译器文件 用来编译less代码成css -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem屏幕适配的js代码 -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="left">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <form action="#">
+            <input type="search" placeholder="请输入要搜索的商品">
+        </form>
+        <a href="productlist.html" class="fa fa-search right" aria-hidden="true"></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <section class="left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul>
+                        <!--  <li class="active"><a href="#">运动馆</a></li>
+                        <li><a href="#">女士馆</a></li>
+                        <li><a href="#">男士馆</a></li>
+                        <li><a href="#">帆布馆</a></li>
+                        <li><a href="#">户外馆</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div id="content">
+                        <div style="display:block;">
+                            <div class="mui-row">
+                                <!-- <div class="mui-col-xs-4">
+                                    <a href="#">
+                                        <img src="images/brand1.png" alt=""><span>耐克</span>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-4">
+                                    <a href="#">
+                                        <img src="images/brand2.png" alt=""><span>阿迪达斯</span>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-4">
+                                    <a href="#">
+                                        <img src="images/brand3.png" alt=""><span>三叶草</span>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-4">
+                                    <a href="#">
+                                        <img src="images/brand4.png" alt=""><span>新百伦</span>
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-4">
+                                    <a href="#">
+                                        <img src="images/brand5.png" alt=""><span>不知道</span>
+                                    </a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div style="display:none;">这里没有更多内容</div>
+                        <div style="display:none;">这里没有更多内容</div>
+                        <div style="display:none;">这里没有更多内容</div>
+                        <div style="display:none;">这里没有更多内容</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <a href="index.html">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+        </a>
+        <a href="#" class="active">
+            <i class="fa fa-bars"></i>
+            <span>分类</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+            <span>购物车</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-user"></i>
+            <span>用户</span>
+        </a>
+        </div>
+    </footer>
+
+    <!-- 创建左边一级模板  -->
+    <script id="leftBrand" type="text/html">
+        {{each rows value}}
+        <!-- 默认页面刷新，显示第一个li是默认选择 -->
+        {{if value.id==1}}
+        <li class="active" data-id={{value.id}}>
+        {{else}}
+        <li data-id={{value.id}}>
+        {{/if}}
+            <a href="#">{{value.categoryName}}</a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 创建右边二级模板 -->
+    <script id="rightBrand" type="text/html">
+        {{each rows value}}
+        <div class="mui-col-xs-4">
+            <a href="#">
+                <img src="{{value.brandLogo}}" alt=""><span>{{value.brandName}}</span>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入zepto 获取元素 发送ajax请求 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎的js -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js -->
+    <script src="js/category.js"></script>
+</body>
+
+</html>

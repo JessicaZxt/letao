@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动端首页</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 引入mui的css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入Font Awesonme的css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己主页的less文件 -->
+    <link rel="stylesheet/less" href="less/search.less">
+    <!-- 引入less.js编译器文件 用来编译less代码成css -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem屏幕适配的js代码 -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="left">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <h4 class="center">搜索中心</h4>
+        <div class="right"></div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="search-form">
+            <form action="#">
+                <input type="search" placeholder="请输入你要搜索的商品">
+                <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+            </form>
+        </div>
+        <div class="mui-card">
+            <!--页眉，放置标题-->
+            <div class="mui-card-header">
+                <span>搜索历史</span>
+                <a href="#" class="fa fa-trash btn-clear">清空记录</a>
+            </div>
+            <!--内容区-->
+            <div class="mui-card-content">
+                <ul class="mui-table-view">
+                 <!--    <li class="mui-table-view-cell">Item 1
+                        <span class="mui-badge mui-badge-primary"><a href="#">x</a></span>
+                    </li>
+                    <li class="mui-table-view-cell">Item 2
+                        <span class="mui-badge mui-badge-primary"><a href="#">x</a></span>
+                    </li>
+                    <li class="mui-table-view-cell">Item 3
+                        <span class="mui-badge mui-badge-primary"><a href="#">x</a></span>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <a href="#" class="active">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+        </a>
+        <a href="category.html">
+            <i class="fa fa-bars"></i>
+            <span>分类</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+            <span>购物车</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-user"></i>
+            <span>用户</span>
+        </a>
+        </div>
+    </footer>
+
+    <!-- 创建模板 -->
+    <script id="tableView" type="text/html">
+        {{each list value}}
+        <li class="mui-table-view-cell">{{value}}
+            <span class="mui-badge mui-badge-primary btn-li">x</span>
+        </li>
+        {{/each}}
+    </script>
+
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入zepto 获取元素 发送ajax请求 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎的js -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js -->
+    <script src="js/search.js"></script>
+</body>
+
+</html>
